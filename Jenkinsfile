@@ -6,12 +6,12 @@ pipeline {
     }
     environment {
         DOCKER_HUB_CREDENTIALS = credentials('docker-hub-creds') // Replace with your Jenkins credentials ID
-        DOCKER_IMAGE_NAME = 'your-dockerhub-username/your-image-name'
+        DOCKER_IMAGE_NAME = '301311/tomcat'
     }
     stages {
         stage('Checkout Code') {
             steps {
-                git branch: 'main', url: 'https://github.com/your-repo.git'
+                git branch: 'main', url: 'https://github.com/teshma1997/docker.git'
             }
         }
         stage('Build Docker Image') {
